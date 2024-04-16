@@ -44,7 +44,7 @@ public class Questao03 {
         System.out.print("\nValores informados: " + numeros);
         System.out.println("\nValores informados: ");
         
-        for (int i = numeros.size(); i < 0; i-- ){
+        for (int i = numeros.size(); i > 0; i-- ){
             
            System.out.println (numeros.get(i)); 
             
