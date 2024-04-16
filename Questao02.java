@@ -11,13 +11,15 @@ ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como
 "Assassino". Caso contrário, ele será classificado como "Inocente".*/
 package lista072024;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Questao02 {
     public static void main (String[] args){
         
         Scanner ler = new Scanner (System.in);
         
-        int opcao, contador = 0;
+        int opcao;
+        ArrayList<Integer> contador = new ArrayList<Integer>();
         
        System.out.print("INVESTIGAÇÃO CRIMINAL\n");
        System.out.print("\nTelefonou para a vítima?\n"
@@ -25,9 +27,16 @@ public class Questao02 {
                + "INFORME: ");
        opcao = ler.nextInt();
        
+       while (opcao != 1 && opcao != 2){
+           
+           System.out.print("INFORME UM VALOR VÁLIDO\nINFORME:");
+           opcao = ler.nextInt();
+           
+       }
+       
        if (opcao == 1){
            
-           contador++;
+           contador.add(opcao);
            
        }
        
@@ -36,9 +45,16 @@ public class Questao02 {
                + "INFORME: ");
        opcao = ler.nextInt();
        
+       while (opcao != 1 && opcao != 2){
+           
+           System.out.print("INFORME UM VALOR VÁLIDO\nINFORME:");
+           opcao = ler.nextInt();
+           
+       }
+       
        if (opcao == 1){
            
-           contador++;
+           contador.add(opcao);
            
        }
        
@@ -47,9 +63,16 @@ public class Questao02 {
                + "INFORME: ");
        opcao = ler.nextInt();
        
+       while (opcao != 1 && opcao != 2){
+           
+           System.out.print("INFORME UM VALOR VÁLIDO\nINFORME:");
+           opcao = ler.nextInt();
+           
+       }
+       
        if (opcao == 1){
            
-           contador++;
+           contador.add(opcao);
            
        }
        
@@ -58,9 +81,16 @@ public class Questao02 {
                + "INFORME: ");
        opcao = ler.nextInt();
        
+       while (opcao != 1 && opcao != 2){
+           
+           System.out.print("INFORME UM VALOR VÁLIDO\nINFORME:");
+           opcao = ler.nextInt();
+           
+       }
+       
        if (opcao == 1){
            
-           contador++;
+           contador.add(opcao);
            
        }
        
@@ -69,21 +99,28 @@ public class Questao02 {
                + "INFORME: ");
        opcao = ler.nextInt();
        
-       if (opcao == 1){
+       while (opcao != 1 && opcao != 2){
            
-           contador++;
+           System.out.print("INFORME UM VALOR VÁLIDO\nINFORME:");
+           opcao = ler.nextInt();
            
        }
        
-       if (contador == 2){
+       if (opcao == 1){
+           
+           contador.add(opcao);
+           
+       }
+       
+       if (contador.size() == 2){
            
            System.out.println("\n'SUSPEITA'");
            
-       }else if (contador >= 3 && contador <= 4){
+       }else if (contador.size() >= 3 && contador.size() <= 4){
            
            System.out.println("\n'CÚMPLICE'");
            
-       }else if (contador == 5){
+       }else if (contador.size() == 5){
            
            System.out.println("\n'ASSASSINO'");
            
